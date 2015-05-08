@@ -1,8 +1,9 @@
-package br.com.example.java;
+package gabriel.tillmann.oficial.java;
+
+import gabriel.tillmann.oficial.android.R;
 
 import java.util.ArrayList;
 
-import br.com.example.oficial1.R;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;

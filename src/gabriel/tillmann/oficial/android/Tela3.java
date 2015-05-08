@@ -1,12 +1,16 @@
-package br.com.example.oficial1;
+package gabriel.tillmann.oficial.android;
+
+import gabriel.tillmann.oficial.android.R;
+import gabriel.tillmann.oficial.java.ListaID;
+import gabriel.tillmann.oficial.java.Pessoa;
+import gabriel.tillmann.oficial.java.PessoaAdapter;
 
 import java.util.ArrayList;
 
-import br.com.example.java.ListaID;
-import br.com.example.java.Pessoa;
-import br.com.example.java.PessoaAdapter;
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.ContentResolver;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Color;
@@ -37,11 +41,13 @@ public class Tela3 extends Activity {
 		    	
 		Log.d("TiLL", "onCreate(Bundle savedInstanceState) tela3");
 		
+		
 		m_titulo = (TextView) findViewById(R.id.t3_label1);
 		m_titulo.setText("Carregando contatos.");
 
 		m_arrPessoa = new ArrayList<Pessoa>();
-        
+		m_iPosicao = 0;
+		
 		ContentResolver cr = getContentResolver();
 		
 		Cursor cursor;
@@ -128,12 +134,28 @@ public class Tela3 extends Activity {
 	}
 	
 	public void onConfirmar(View view) {
-		Intent confirmar = new Intent();
-		setResult(Tela1.S_OK, confirmar);
 		
-		confirmar.putExtra("objeto", m_arrPessoa.get(m_iPosicao));
+		if (m_iPosicao == 0)
+		{
+			AlertDialog.Builder alert  = new AlertDialog.Builder(Tela3.this);
+			alert.setTitle("Alerta");
+			alert.setMessage("Selecione um contado!");
+			alert.setPositiveButton("Ok", new DialogInterface.OnClickListener() 
+			{
+	            public void onClick(DialogInterface arg0, int arg1) {
+	            }
+			});
+					
+			alert.show();
+		}
+		else
+		{
+			Intent confirmar = new Intent();
+			setResult(Tela1.S_OK, confirmar);
+			confirmar.putExtra("objeto", m_arrPessoa.get(m_iPosicao));
 		
-		finish();
+			finish();
+		}
 	}
 	
 	public void onCancelar(View v) {

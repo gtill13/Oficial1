@@ -1,10 +1,12 @@
-package br.com.example.oficial1;
+package gabriel.tillmann.oficial.android;
+
+import gabriel.tillmann.oficial.android.R;
+import gabriel.tillmann.oficial.java.ListaID;
+import gabriel.tillmann.oficial.java.Pessoa;
+import gabriel.tillmann.oficial.java.PessoaAdapter;
 
 import java.util.ArrayList;
 
-import br.com.example.java.ListaID;
-import br.com.example.java.Pessoa;
-import br.com.example.java.PessoaAdapter;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -71,8 +73,8 @@ public class Tela1 extends Activity {
 				final int posicao = posicaoClicada;
 	
 				AlertDialog.Builder alert  = new AlertDialog.Builder(Tela1.this);
-				alert.setTitle("Exclus„o");
-				alert.setMessage("Confirma a exclus„o da linha seleciona?");
+				alert.setTitle("Exclus√£o");
+				alert.setMessage("Confirma a exclus√£o da linha seleciona?");
 				alert.setPositiveButton("Sim", new DialogInterface.OnClickListener() 
 				{
 		            public void onClick(DialogInterface arg0, int arg1) {
@@ -81,7 +83,7 @@ public class Tela1 extends Activity {
 		            }
 				});
 				
-				alert.setNegativeButton("N„o", new DialogInterface.OnClickListener() 
+				alert.setNegativeButton("N√£o", new DialogInterface.OnClickListener() 
 				{
 		            public void onClick(DialogInterface arg0, int arg1) {		   
 		            }
@@ -144,8 +146,8 @@ public class Tela1 extends Activity {
         else if (id == R.id.menuSair) {
         	      	
         	AlertDialog.Builder alert  = new AlertDialog.Builder(Tela1.this);
-			alert.setTitle("Encerrar aplicaÁ„o");
-			alert.setMessage("Deseja realmente encerrar a aplicaÁ„o?");
+			alert.setTitle("Encerrar aplica√ß√£o");
+			alert.setMessage("Deseja realmente encerrar a aplica√ß√£o?");
 			alert.setPositiveButton("Sim", new DialogInterface.OnClickListener() 
 			{
 	            public void onClick(DialogInterface arg0, int arg1) {
@@ -153,7 +155,7 @@ public class Tela1 extends Activity {
 	            }
 			});
 			
-			alert.setNegativeButton("N„o", new DialogInterface.OnClickListener() 
+			alert.setNegativeButton("N√£o", new DialogInterface.OnClickListener() 
 			{
 	            public void onClick(DialogInterface arg0, int arg1) {		   
 	            }
@@ -170,8 +172,8 @@ public class Tela1 extends Activity {
     @Override
     public void finish() {
     	AlertDialog.Builder alert  = new AlertDialog.Builder(Tela1.this);
-		alert.setTitle("Encerrar aplicaÁ„o");
-		alert.setMessage("Deseja realmente encerrar a aplicaÁ„o?");
+		alert.setTitle("Encerrar aplica√ß√£o");
+		alert.setMessage("Deseja realmente encerrar a aplica√ß√£o?");
 		alert.setPositiveButton("Sim", new DialogInterface.OnClickListener() 
 		{
             public void onClick(DialogInterface arg0, int arg1) {
@@ -179,7 +181,7 @@ public class Tela1 extends Activity {
             }
 		});
 		
-		alert.setNegativeButton("N„o", new DialogInterface.OnClickListener() 
+		alert.setNegativeButton("N√£o", new DialogInterface.OnClickListener() 
 		{
             public void onClick(DialogInterface arg0, int arg1) {		   
             }

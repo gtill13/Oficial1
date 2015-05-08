@@ -1,4 +1,4 @@
-package br.com.example.java;
+package gabriel.tillmann.oficial.java;
 
 import java.io.Serializable;
 

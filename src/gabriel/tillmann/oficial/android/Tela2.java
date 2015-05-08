@@ -1,6 +1,7 @@
-package br.com.example.oficial1;
+package gabriel.tillmann.oficial.android;
 
-import br.com.example.java.Pessoa;
+import gabriel.tillmann.oficial.android.R;
+import gabriel.tillmann.oficial.java.Pessoa;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
